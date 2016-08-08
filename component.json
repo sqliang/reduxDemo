@@ -1,0 +1,10 @@
+{
+  "gitlab": {
+    "author": "tb-component"
+  },
+  "dependencies": [
+    "github:fis-components/react@0.14.6",
+    "github:fis-components/react-dom@0.14.6",
+    "github:fis-components/react-router@2.0.0-rc5"
+  ]
+}

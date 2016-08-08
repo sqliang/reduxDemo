@@ -1,0 +1,68 @@
+{
+  "name": "subModName",
+  "version": "1.0.0",
+  "description": "test",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "fis3 release -cwd ./output & fis3 server start --type node --www ./output --no-daemon --no-browse",
+    "dev": "fis3 release qa -wcd ./output",
+    "qa": "fis3 release -wcd ./output",
+    "preview": "fis3 release preview -c",
+    "release": "fis3 release production",
+    "webpack": "node ./node_modules/fis3-tb-build/webpack/server.js",
+    "bundle": "webpack --config ./node_modules/fis3-tb-build/webpack/webpack.bundle.config.js",
+    "update": "git clone http://gitlab.baidu.com/tb-component/build-update.git _update; sh ./_update/update.sh; rm -rf _update",
+    "init-ts": "git clone http://gitlab.baidu.com/tb-component/build-ts.git _typescript; sh ./_typescript/build.sh; rm -rf _typescript"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.baidu.com/tb/test.git"
+  },
+  "keywords": [
+    "fis3",
+    "captcha"
+  ],
+  "author": "tb",
+  "license": "ISC",
+  "dependencies": {
+    "buffer": "^4.4.0",
+    "classnames": "^2.2.5",
+    "history": "^1.17.0",
+    "immutable": "^3.8.1",
+    "is-buffer": "^1.1.2",
+    "jquery": "^3.1.0",
+    "object-assign": "^4.0.1",
+    "process": "^0.11.2",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-immutable-render-mixin": "^0.9.7",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.0.0-rc5",
+    "redux": "^3.5.2",
+    "redux-devtools": "^3.3.1",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "fis3-tb-build": "http://gitlab.baidu.com/tb-component/build/repository/archive.tar.gz",
+    "babel-core": "^6.3.26",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-plugin-transform-object-assign": "^6.3.13",
+    "babel-loader": "^6.2.0",
+    "file-loader": "^0.8.5",
+    "css-path-loader": "^0.2.14",
+    "html-path-loader": "^0.1.10",
+    "css-loader": "^0.23.1",
+    "url-loader": "^0.5.7",
+    "style-loader": "^0.13.0",
+    "react-hot-loader": "^1.3.0",
+    "sass-loader": "^3.1.2",
+    "autoprefixer": "^6.2.2",
+    "autoprefixer-loader": "^3.1.0",
+    "node-sass": "^3.4.2",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0",
+    "json-loader": "^0.5.4"
+  }
+}

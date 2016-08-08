@@ -1,0 +1,19 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "target": "es6",
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "experimentalDecorators": true,
+        "inlineSourceMap": true,
+        "inlineSources": true,
+        "jsx": "preserve"
+    },
+    "exclude": [
+        "node_modules",
+        "output",
+        "typings"
+    ]
+}
