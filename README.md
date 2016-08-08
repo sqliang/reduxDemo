@@ -1,7 +1,7 @@
 # reduxDemo
 一个基于React-Router和redux，react-redux,redux-thunk, immutable的单页面训练项目
 ## 搭建部署
-本项目使用fis和webpack进行
+本项目使用fis和webpack管理部署
 ## 路由，视图，数据流
 > 视图：本项目视图层使用react组件来组装；
 > 路由：本项目路由使用react-router;
