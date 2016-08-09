@@ -23,10 +23,10 @@ class LiItem extends Component {
         super(props);
     }
     render(){
-        let liClass = classNames({hidden:!_.isEmpty(this.props.filter) && this.props.filter != this.props.item});
+        let liClass = classNames({ hidden:!_.isEmpty(this.props.filter) && this.props.filter != this.props.item });
 
         return (
-            <li className={'form-group' + liClass}>
+            <li className={liClass}>
                 <span style={{marginRight: '4px'}}>{this.props.item}</span>
                 <button className="btn btn-default" onClick={this.props.deleteItem.bind(this,this.props.item)}>删除</button>
             </li>

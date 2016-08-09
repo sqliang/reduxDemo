@@ -6,7 +6,7 @@ let buildStore;
     buildStore = compose(applyMiddleware(thunk))(createStore);
 
 export default function configureStore (initialState) {
-    const store = buildStore(rootReducer, initialState);
+    const store = buildStore(rootReducer, initialState,window.devToolsExtension ? window.devToolsExtension() : DevTools.instrument());
     if(module.hot) {
         module.hot.accept('/client/reducers/index.jsx', () => {
             store.replaceReducer(require('/client/reducers/index.jsx'))
