@@ -2,7 +2,7 @@ import * as types from '../constants/actionTypes'
 
 export function addItem() {
     return dispatch => {
-        setTimeout(() => dispatch({type: types.ADD_ITEM}),1000);
+        setTimeout(() => dispatch({type: types.ADD_ITEM}),300);
     }
 }
 

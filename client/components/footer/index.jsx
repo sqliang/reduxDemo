@@ -1,5 +1,4 @@
 import React from 'react';
-import ImmutableRenderMixin from 'react-immutable-render-mixin';
 
 class Footer extends React.Component {
     constructor(props){
@@ -9,15 +8,12 @@ class Footer extends React.Component {
     render() {
         return (
             <div style={{textAlign:'center'}}>
-                <button onClick={this.props.addItem}>
+                <button style={{marginRight: '10px'}} className="btn btn-primary" onClick={this.props.addItem}>
                     添加
                 </button>
-                <button onClick={this.props.deleteAll}>删除所有</button>
+                <button className="btn btn-danger" onClick={this.props.deleteAll}>删除所有</button>
             </div>
         )
     }
 }
-
-Footer.mixins = [ImmutableRenderMixin];
-
 export default Footer;

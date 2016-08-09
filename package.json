@@ -25,6 +25,7 @@
   "author": "tb",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "buffer": "^4.4.0",
     "classnames": "^2.2.5",
     "history": "^1.17.0",

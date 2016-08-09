@@ -4,7 +4,6 @@ import Content from '../../components/content/index';
 import Footer from '../../components/footer/index';
 
 import { connect } from 'react-redux';
-import ImmutableRenderMixin from 'react-immutable-render-mixin';
 import * as ItemsActions from '../../actions';
 import { bindActionCreators } from 'redux';
 
@@ -28,7 +27,6 @@ class Home extends Component {
     }
 }
 
-Home.mixins = [ImmutableRenderMixin];
 Home.propTypes = {
     items: React.PropTypes.object,
     filter : React.PropTypes.string

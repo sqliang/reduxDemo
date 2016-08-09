@@ -4,6 +4,7 @@ import routes from './router';
 import {Provider} from 'react-redux';
 import configureStore from './store/configureStore';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
 
 const store = configureStore();
