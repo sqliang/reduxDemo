@@ -5,6 +5,10 @@ import Footer from '../../components/footer/index';
 
 import { connect } from 'react-redux';
 import * as ItemsActions from '../../actions';
+/**
+ * bindActionCreators 将store.dispatch 和action creater 组合在一起,简化调用
+ *
+ */
 import { bindActionCreators } from 'redux';
 
 class Home extends Component {
