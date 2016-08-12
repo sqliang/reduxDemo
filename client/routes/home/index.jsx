@@ -4,7 +4,7 @@ import Content from '../../components/content/index';
 import Footer from '../../components/footer/index';
 
 import { connect } from 'react-redux';
-import * as ItemsActions from '../../actions';
+import * as ItemsActions from '../../actions/home/index';
 /**
  * bindActionCreators 将store.dispatch 和action creater 组合在一起,简化调用
  *

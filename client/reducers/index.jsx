@@ -6,11 +6,14 @@
 
 import { combineReducers } from 'redux';
 
-import items from './items';
-import filter from './filter';
+import items from './home/items';
+import filter from './home/filter';
+import counter from './counterPage/counter';
 
 const rootReducer = combineReducers({
     items,
-    filter
+    filter,
+    counter
 });
+
 export default rootReducer;

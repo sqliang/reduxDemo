@@ -2,7 +2,7 @@
  * 
  */
 import Immutable from 'immutable';
-import * as types from '../constants/actionTypes';
+import * as types from '../../constants/homeActionTypes';
 
 const initialItems = Immutable.List([1,2,3]);
 
