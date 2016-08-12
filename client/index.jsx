@@ -9,5 +9,8 @@ import './index.scss';
 
 const store = configureStore();
 
+// 查看store和state
+console.log(store);
+console.log(store.getState());
 
 ReactDOM.render(<Provider store={store}>{routes}</Provider>, document.getElementById('react-dom'));
