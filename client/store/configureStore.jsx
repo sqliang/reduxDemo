@@ -14,6 +14,8 @@ import { createStore,compose,applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers/index';
 
+// applyMiddleware来自redux可以包装store的dispatch(),
+// thunk作用是使action创建函数可以返回一个funciton代替一个action对象
 let buildStore;
     buildStore = compose(
         applyMiddleware(thunk),
@@ -22,10 +24,13 @@ let buildStore;
 
 export default function configureStore (initialState) {
     const store = buildStore(rootReducer, initialState);
+
+    // 热替换选项,如果在热替换状态下,允许替换reducer
     if(module.hot) {
         module.hot.accept('/client/reducers/index.jsx', () => {
             store.replaceReducer(require('/client/reducers/index.jsx'))
         });
     }
+
     return store;
 }
