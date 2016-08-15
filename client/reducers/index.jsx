@@ -9,11 +9,13 @@ import { combineReducers } from 'redux';
 import items from './home/items';
 import filter from './home/filter';
 import counter from './counterPage/counter';
+import async from './asyncPage/async';
 
 const rootReducer = combineReducers({
     items,
     filter,
-    counter
+    counter,
+    async
 });
 
 export default rootReducer;
