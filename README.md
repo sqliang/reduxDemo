@@ -22,3 +22,6 @@
 ### 在actions里写相关action代码
 
 ### 在reducers里写相关reducer代码
+
+## redux-actions介绍
+是用来生成基本基本aciton type函数模板代码，是一个action creator，同时，它的handleactions可以简化reducers的写法，不用那么多switch
