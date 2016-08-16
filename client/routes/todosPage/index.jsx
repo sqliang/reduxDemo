@@ -18,29 +18,30 @@ class TodosPage extends Component {
         const {fetchTodos} = this.props;
         fetchTodos(url);
     }
-    render() {
+    renderData(){
         const {todos} = this.props;
-
-        return (<div className="container" id="todo-list">
-            <h3>Hello,world.</h3>
-            <button className="btn btn-default" onClick={this.handleClick.bind(this)}>获取数据</button>
-            {todos.isLoading &&
+        if(todos.isLoading){
+            return (
                 <span>loading</span>
-            }
-            {
-
-            }
-            {todos.data &&
-            <table className="table">
-                <thead>
+            )
+        }
+        if (todos.error) {
+            return (
+                <h4>something error</h4>
+            )
+        }
+        if (todos.data.length > 0){
+            return (
+                <table className="table">
+                    <thead>
                     <tr>
                         <th>#</th>
                         <th>name</th>
                         <th>capital</th>
                         <th>region</th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     {
                         todos.data.map((todo,index) => {
                             return (
@@ -53,9 +54,19 @@ class TodosPage extends Component {
                             )
                         })
                     }
-                </tbody>
-            </table>
-            }
+                    </tbody>
+                </table>
+            )
+        }
+    }
+
+    render() {
+        return (<div className="container" id="todo-list">
+            <h3>Hello,world.</h3>
+            <button className="btn btn-default" onClick={this.handleClick.bind(this)}>获取数据</button>
+            <div>
+                {this.renderData()}
+            </div>
         </div>)
     }
 

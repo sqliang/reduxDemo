@@ -27,7 +27,6 @@ export function fetchTodos(url){
         return axios({
             url: url,
             method: 'get',
-            timeout: 20000,
             responseType: 'json'
         }).then(function(response){
             dispatch(receiveTodos(response.data));
