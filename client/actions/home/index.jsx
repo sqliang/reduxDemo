@@ -1,5 +1,6 @@
 import * as types from '../../constants/homeActionTypes'
 
+
 export function addItem() {
     return dispatch => {
         setTimeout(() => dispatch({type: types.ADD_ITEM}),300);
@@ -25,5 +26,10 @@ export function filterItem(e) {
     return {
         type: types.FILTER_ITEM,
         filterItem
+    }
+}
+export function getAsync() {
+    return dispatch => {
+        
     }
 }

@@ -9,13 +9,14 @@ import { combineReducers } from 'redux';
 import items from './home/items';
 import filter from './home/filter';
 import counter from './counterPage/counter';
-import async from './asyncPage/async';
+import todosReducer from './todosPage/todosReducer';
+
 
 const rootReducer = combineReducers({
     items,
     filter,
     counter,
-    async
+    todos: todosReducer
 });
 
 export default rootReducer;

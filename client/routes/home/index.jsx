@@ -3,6 +3,8 @@ import SearchBar from '../../components/searchBar/index';
 import Content from '../../components/content/index';
 import Footer from '../../components/footer/index';
 
+import axios from 'axios';
+
 import { connect } from 'react-redux';
 import * as ItemsActions from '../../actions/home/index';
 /**
@@ -12,6 +14,36 @@ import * as ItemsActions from '../../actions/home/index';
 import { bindActionCreators } from 'redux';
 
 class Home extends Component {
+
+    componentDidMount(){
+        // GET
+        axios.get('https://www.reddit.com/r/reactjs.json',{
+            params: {
+                id:3,
+                name: 'sqliang'
+            }
+        }).then(function(res){
+                console.dir(res);
+                console.log(res.data);
+            })
+            .catch(function(error){
+               console.error(error);
+            });
+        axios.get('https://www.reddit.com/r/frontend.json'
+        ).then(function(res){
+            console.log(res);
+        }).catch(function(error){
+            console.log(error);
+        });
+        //批量ajax
+        axios.all([axios.get('https://www.reddit.com/r/reactjs.json'),
+                    axios.get('https://www.reddit.com/r/frontend.json')])
+            .then(axios.spread(function (res1, res2) {
+                console.log("=======>>>all:");
+                console.log(res1);
+                console.log(res2);
+            }));
+    }
     render() {
         let styles = {
             width: '200px',
