@@ -9,12 +9,17 @@ class TodosPage extends Component {
         super(props);
     }
     componentWillMount(){
-        const url = 'https://restcountries.eu/rest/v1/all';
+        const url = './test.json';
         const {fetchTodos} = this.props;
         fetchTodos(url);
     }
+   /* componentDidMount(){
+        const url = './test.json';
+        const {fetchTodos} =  this.props;
+        fetchTodos(url);
+    }*/
     handleClick(){
-        const url = 'https://restcountries.eu/rest/v1/all';
+        const url = './test.json';
         const {fetchTodos} = this.props;
         fetchTodos(url);
     }
