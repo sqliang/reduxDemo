@@ -20,7 +20,6 @@ function receiveError(json) {
         data: json
     }
 }
-
 export function fetchTodos(url){
     return dispatch => {
         dispatch(requestTodos());
